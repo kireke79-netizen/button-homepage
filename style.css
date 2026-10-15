@@ -165,3 +165,25 @@ nav.main a[aria-current="page"]::after{content:"";display:block;height:2px;backg
 .latest h3{font-size:17px;margin:0;letter-spacing:-.02em}
 .latest time{font:500 13px var(--f-display);color:var(--muted);text-align:right}
 @media (max-width:640px){.latest a{grid-template-columns:1fr;gap:6px}.latest time{text-align:left}}
+
+.inq{margin-top:72px;padding-top:56px;border-top:1px solid var(--line);display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+.inq>*{min-width:0}
+.inq h3{font:800 clamp(22px,2.6vw,30px)/1.2 var(--f-display);margin:0 0 14px;letter-spacing:-.01em}
+.inq .note{color:var(--muted);font-size:14.5px;margin:0;word-break:keep-all}
+.inq form{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+.inq .f{display:grid;gap:7px;min-width:0}
+.inq .full{grid-column:1/-1}
+.inq label{font:600 13px var(--f-body);color:var(--ink)}
+.inq label .req{color:var(--accent);margin-left:3px}
+.inq input,.inq select,.inq textarea{width:100%;font:400 15px var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.inq textarea{min-height:170px;resize:vertical;line-height:1.6}
+.inq input:focus,.inq select:focus,.inq textarea:focus{outline:none;border-color:var(--accent)}
+.inq .consent{grid-column:1/-1;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;font-size:13px;color:var(--muted);line-height:1.65}
+.inq .consent label{display:flex;gap:10px;align-items:flex-start;margin-top:10px;color:var(--ink);font-weight:500;font-size:14px;cursor:pointer}
+.inq .consent input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--accent)}
+.inq button[type=submit]{grid-column:1/-1;justify-self:start;font:700 15px var(--f-body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:15px 30px;cursor:pointer}
+.inq .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media (max-width:860px){.inq{grid-template-columns:1fr;gap:28px}.inq form{grid-template-columns:1fr}}
+.thanks{padding-block:120px 140px}
+.thanks h1{font:800 clamp(30px,5vw,56px)/1.15 var(--f-display);margin:0 0 20px;letter-spacing:-.02em}
+.thanks p{color:var(--muted);font-size:17px;margin:0 0 32px;word-break:keep-all}
