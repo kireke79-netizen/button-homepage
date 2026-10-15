@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Newsroom · BUTTON</title>
+<meta name="description" content="BUTTON — 아티스트, 컴퍼니, 작품을 위한 브랜딩 PR 에이전시">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<meta property="og:title" content="Newsroom · BUTTON"><meta property="og:description" content="BUTTON — 아티스트, 컴퍼니, 작품을 위한 브랜딩 PR 에이전시"><meta property="og:image" content="img/artist.jpg">
+<link rel="icon" href="img/logo-white.png">
+</head><body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="index.html"><img src="img/wordmark-white.png" alt="BUTTON"></a>
+    <nav class="main">
+      <a href="about.html">ESSENCE</a>
+      <a href="work.html">WORK SCOPE</a>
+      <a href="why.html">WHY BUTTON</a>
+      <a href="references.html">REFERENCES</a>
+      <a href="newsroom.html" aria-current="page">NEWSROOM</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a class="pill" href="contact.html">프로젝트 문의</a>
+  </div>
+  <nav class="subnav" aria-label="메뉴"><div class="wrap in">
+      <a href="about.html">ESSENCE</a>
+      <a href="work.html">WORK SCOPE</a>
+      <a href="why.html">WHY BUTTON</a>
+      <a href="references.html">REFERENCES</a>
+      <a href="newsroom.html" aria-current="page">NEWSROOM</a>
+      <a href="contact.html">CONTACT</a>
+  </div></nav>
+</header>
+
+<main id="top" class="page-top">
+<section class="block" id="newsroom">
+    <div class="wrap">
+      <div class="shead"><span class="chapter">NEWS</span><h2>NEWSROOM <small>PRESS RELEASE · PROJECT</small></h2></div>
+      <div class="tabs" role="group" aria-label="게시판 분류">
+        <button type="button" id="t-all" data-f="all" aria-pressed="true">전체<span class="count" id="c-all"></span></button>
+        <button type="button" id="t-press" data-f="보도자료" aria-pressed="false">보도자료<span class="count" id="c-press"></span></button>
+        <button type="button" id="t-plan" data-f="기획" aria-pressed="false">기획<span class="count" id="c-plan"></span></button>
+      </div>
+      <ul class="posts" id="posts"></ul>
+    </div>
+  </section>
+
+<dialog id="dlg" aria-labelledby="d-title">
+  <button type="button" class="close" id="d-close" aria-label="닫기">×</button>
+  <div class="dlg">
+    <div class="meta"><span class="chip" id="d-type"></span><time id="d-date"></time></div>
+    <h3 id="d-title"></h3>
+    <img id="d-img" alt="" hidden>
+    <div class="body" id="d-body"></div>
+    <div class="acts" id="d-acts"></div>
+  </div>
+</dialog>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <img src="img/wordmark-white.png" alt="BUTTON">
+    <span>서울 강남구 도산대로54길 10, 4층 · © 2026 BUTTON. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var POSTS=[],filter='all',list=document.getElementById('posts'),dlg=document.getElementById('dlg');
+  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function fmt(d){return d?d.replace(/-/g,'.'):''}
+  function render(){
+    var rows=POSTS.filter(function(p){return filter==='all'||p.type===filter});
+    document.getElementById('c-all').textContent=POSTS.length;
+    document.getElementById('c-press').textContent=POSTS.filter(function(p){return p.type==='보도자료'}).length;
+    document.getElementById('c-plan').textContent=POSTS.filter(function(p){return p.type==='기획'}).length;
+    if(!rows.length){list.innerHTML='<li class="empty">등록된 '+(filter==='all'?'게시물':filter)+'이 없습니다.</li>';return}
+    list.innerHTML=rows.map(function(p){
+      return '<li><button type="button" class="post" data-id="'+esc(p.id)+'"><span class="chip'+(p.type==='보도자료'?' press':'')+'">'+esc(p.type)+'</span><div><h3>'+esc(p.title)+'</h3><p>'+esc(p.summary)+'</p></div><time>'+esc(fmt(p.date))+'</time></button></li>';
+    }).join('');
+  }
+  function open(id){
+    var p=POSTS.find(function(x){return x.id===id});if(!p)return;
+    var t=document.getElementById('d-type');t.textContent=p.type;t.className='chip'+(p.type==='보도자료'?' press':'');
+    document.getElementById('d-date').textContent=fmt(p.date);
+    document.getElementById('d-title').textContent=p.title;
+    var im=document.getElementById('d-img');if(p.image){im.src=p.image;im.alt=p.title;im.hidden=false}else{im.hidden=true;im.removeAttribute('src')}
+    document.getElementById('d-body').innerHTML=String(p.body||p.summary||'').split(/\n\s*\n/).map(function(x){return '<p>'+esc(x).replace(/\n/g,'<br>')+'</p>'}).join('');
+    var a='';
+    if(p.file)a+='<a class="btn primary" href="'+esc(p.file)+'" target="_blank" rel="noopener">첨부 파일 보기</a>';
+    if(p.link)a+='<a class="btn" href="'+esc(p.link)+'" target="_blank" rel="noopener">기사 원문 보기</a>';
+    document.getElementById('d-acts').innerHTML=a;
+    if(!dlg.open)dlg.showModal();
+    try{history.replaceState(null,'','#'+id)}catch(e){}
+  }
+  function close(){dlg.close()}
+  dlg.addEventListener('close',function(){try{if(location.hash.slice(1)&&POSTS.some(function(p){return p.id===location.hash.slice(1)}))history.replaceState(null,'','#newsroom')}catch(e){}});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+  document.getElementById('d-close').addEventListener('click',close);
+  list.addEventListener('click',function(e){var b=e.target.closest('.post');if(b)open(b.dataset.id)});
+  document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+    filter=b.dataset.f;document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});render()})});
+  list.innerHTML='<li class="empty">게시물을 불러오는 중입니다.</li>';
+  fetch('posts.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
+    POSTS=(Array.isArray(d)?d:[]).slice().sort(function(a,b){return (b.date||'').localeCompare(a.date||'')});
+    render();var h=location.hash.slice(1);if(h&&POSTS.some(function(p){return p.id===h}))open(h);
+  }).catch(function(){list.innerHTML='<li class="empty">게시물을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</li>'});
+
+
+})();
+
+</script>
+</body></html>

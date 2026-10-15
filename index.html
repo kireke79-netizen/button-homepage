@@ -1,275 +1,68 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta property="og:title" content="BUTTON — Branding PR Agency"><meta property="og:description" content="아티스트, 컴퍼니, 작품을 위한 브랜딩 PR 에이전시"><meta property="og:image" content="img/artist.jpg">
-<link rel="icon" href="img/logo-white.png">
-<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}[hidden]{display:none!important}</style>
-<title>BUTTON</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<title>BUTTON</title>
 <meta name="description" content="BUTTON — 아티스트, 컴퍼니, 작품을 위한 브랜딩 PR 에이전시">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Noto+Sans+KR:wght@400;500;700&display=swap">
-<style>
-/* Layout: the company deck as a website — black ground, monochrome photography, one orange accent reserved for the word BUTTON and the four-hole button mark. */
-:root{
-  --bg:#0A0A0A; --surface:#141414; --raise:#1C1C1C; --ink:#F3F3F1; --muted:#9C9C98; --line:#2A2A2A;
-  --accent:#FF7A1A; --accent-ink:#0A0A0A;
-  --f-display:"Montserrat","Noto Sans KR",system-ui,sans-serif;
-  --f-body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img{max-width:100%;display:block}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.or{color:var(--accent)}
-.bmark{display:inline-block;width:.8em;height:.8em;border-radius:50%;background:var(--accent);position:relative;vertical-align:baseline;flex:none}
-.bmark::before{content:"";position:absolute;inset:32%;background:
-  radial-gradient(circle at 25% 25%,var(--bg) 22%,transparent 24%),radial-gradient(circle at 75% 25%,var(--bg) 22%,transparent 24%),
-  radial-gradient(circle at 25% 75%,var(--bg) 22%,transparent 24%),radial-gradient(circle at 75% 75%,var(--bg) 22%,transparent 24%)}
-
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;gap:28px;min-height:68px}
-.logo img{height:22px;width:auto}
-nav.main{display:flex;gap:24px;margin-left:auto;font:600 12.5px var(--f-display);letter-spacing:.12em}
-nav.main a{text-decoration:none;color:var(--muted)}
-nav.main a:hover{color:var(--ink)}
-.pill{display:inline-flex;align-items:center;gap:8px;font:700 12.5px var(--f-display);letter-spacing:.1em;text-decoration:none;padding:10px 16px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);white-space:nowrap}
-.pill:hover{background:var(--accent);color:var(--accent-ink)}
-@media (max-width:920px){nav.main{display:none}.pill{margin-left:auto}}
-
-.hero{padding-block:88px 40px}
-.hero .kicker{font:700 12.5px var(--f-display);letter-spacing:.24em;color:var(--muted);margin:0 0 28px;display:flex;align-items:center;gap:10px}
-.hero h1{font-family:var(--f-body);font-weight:700;font-size:clamp(30px,5.4vw,64px);line-height:1.22;letter-spacing:-.035em;margin:0;text-wrap:balance;word-break:keep-all}
-.hero h1 .en{font-family:var(--f-display);font-weight:900;letter-spacing:-.02em}
-.hero p{max-width:36em;color:var(--muted);font-size:17px;margin:26px 0 34px;word-break:keep-all}
-.ctas{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:700 14px var(--f-body);text-decoration:none;border:1px solid var(--ink)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn small{font:600 11px var(--f-display);letter-spacing:.1em;opacity:.75}
-.runway{margin-top:56px;aspect-ratio:2000/419;max-width:100%;background:url("img/hero.jpg") center/cover no-repeat;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-
-section.block{padding-block:96px}
-.shead{margin-bottom:48px}
-.chapter{display:block;font:800 10.5px var(--f-display);letter-spacing:.16em;background:var(--ink);color:var(--bg);padding:3px 10px;width:fit-content;margin-bottom:14px}
-.shead h2{font:800 clamp(26px,3.6vw,40px)/1.1 var(--f-display);letter-spacing:-.01em;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:14px;border-bottom:2px solid var(--ink);width:fit-content;max-width:100%}
-.shead h2 small{font:600 13px var(--f-display);letter-spacing:.08em;color:var(--muted)}
-@media (max-width:760px){section.block{padding-block:64px}.hero{padding-block:56px 32px}}
-
-.essence{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.essence>*{min-width:0}
-.essence .state{font-size:clamp(22px,2.8vw,32px);line-height:1.5;font-weight:500;letter-spacing:-.03em;margin:0 0 32px;word-break:keep-all}
-.essence .state b{font-family:var(--f-display);font-weight:800;letter-spacing:0}
-.essence blockquote{margin:0;padding:22px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:16px;word-break:keep-all}
-.essence blockquote strong{color:var(--accent);font:800 1.15em var(--f-display)}
-.essence figure{margin:0}
-.essence figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line)}
-@media (max-width:860px){.essence{grid-template-columns:1fr;gap:36px}}
-
-.scope{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:26px 22px 28px;min-width:0;display:flex;flex-direction:column;gap:12px}
-.card h3{font:800 15px var(--f-display);letter-spacing:.06em;margin:0;display:flex;align-items:center;gap:10px}
-.card .lead{margin:0;font-size:14.5px;color:var(--ink);word-break:keep-all}
-.card ul{list-style:none;margin:4px 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;gap:8px}
-.card li{font-size:13.5px;color:var(--muted);padding-left:14px;position:relative;word-break:keep-all;line-height:1.6}
-.card li::before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--muted)}
-@media (max-width:1000px){.scope{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.scope{grid-template-columns:1fr}}
-.band{margin:56px 0 0;position:relative;border:1px solid var(--line);overflow:hidden}
-.band img{width:100%;aspect-ratio:21/8;object-fit:cover;filter:contrast(1.05)}
-.band figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 26px;font:800 clamp(14px,1.8vw,18px) var(--f-display);letter-spacing:.08em;background:linear-gradient(transparent,color-mix(in srgb,var(--bg) 85%,transparent))}
-@media (max-width:560px){.band img{aspect-ratio:4/3}}
-
-.why{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line)}
-.why>div{padding:26px 22px 4px 0;min-width:0}
-.why .k{font:800 12px var(--f-display);letter-spacing:.14em;color:var(--accent);display:block;margin-bottom:12px}
-.why h3{font-size:17px;line-height:1.45;margin:0 0 8px;word-break:keep-all;letter-spacing:-.02em}
-.why p{margin:0;font-size:14px;color:var(--muted);word-break:keep-all}
-@media (max-width:1000px){.why{grid-template-columns:1fr 1fr;gap:0 28px}.why>div{border-bottom:1px solid var(--line);padding-bottom:22px}}
-@media (max-width:560px){.why{grid-template-columns:1fr}}
-
-.refs{border-top:2px solid var(--ink)}
-.ref{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
-.ref>*{min-width:0}
-.ref h3{font:800 13px var(--f-display);letter-spacing:.12em;margin:3px 0 0}
-.ref p{margin:0;font-size:15.5px;word-break:keep-all}
-.ref p+p{margin-top:8px}
-.ref .sub{color:var(--muted);font-size:14px}
-@media (max-width:760px){.ref{grid-template-columns:1fr;gap:8px}}
-
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.tabs button{font:600 14px var(--f-body);background:none;border:1px solid var(--line);color:var(--muted);padding:9px 18px;border-radius:999px;cursor:pointer}
-.tabs button[aria-pressed="true"]{border-color:var(--ink);color:var(--bg);background:var(--ink)}
-.tabs .count{font:700 11px var(--f-display);margin-left:6px;opacity:.7}
-.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.posts li{border-bottom:1px solid var(--line)}
-.post{display:grid;grid-template-columns:96px 1fr 110px;gap:24px;align-items:baseline;width:100%;text-align:left;background:none;border:0;color:inherit;padding:22px 4px;cursor:pointer;font:inherit}
-.post>*{min-width:0}
-.post:hover h3{color:var(--accent)}
-.chip{font:700 12px var(--f-body);color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:2px 8px;width:fit-content}
-.chip.press{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
-.post h3{font-size:18px;margin:0 0 4px;letter-spacing:-.02em;transition:color .15s}
-.post p{margin:0;color:var(--muted);font-size:14.5px;word-break:keep-all}
-.post time{font:500 13px var(--f-display);color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
-.empty{padding:40px 4px;color:var(--muted);border-bottom:1px solid var(--line)}
-@media (max-width:640px){.post{grid-template-columns:1fr;gap:6px}.post time{text-align:left}}
-
-dialog{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:0;width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 64px)}
-dialog::backdrop{background:rgba(0,0,0,.72)}
-.dlg{padding:34px 34px 36px;overflow:auto;max-height:calc(100vh - 66px)}
-.dlg .meta{display:flex;gap:12px;align-items:center;margin-bottom:14px;color:var(--muted);font-size:13px}
-.dlg h3{font-size:clamp(21px,3vw,28px);line-height:1.35;letter-spacing:-.03em;margin:0 0 22px;word-break:keep-all}
-.dlg img{width:100%;margin:0 0 22px;border:1px solid var(--line)}
-.dlg .body p{margin:0 0 14px;word-break:keep-all}
-.dlg .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.close{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--raise);color:var(--ink);font-size:20px;line-height:1;cursor:pointer}
-@media (max-width:560px){.dlg{padding:26px 20px 28px}}
-
-.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
-.contact>*{min-width:0}
-.contact .line{font-size:clamp(24px,3.6vw,42px);line-height:1.35;font-weight:700;letter-spacing:-.035em;margin:0;word-break:keep-all}
-.contact .line .en{font-family:var(--f-display);font-weight:900;letter-spacing:-.01em}
-.who{margin:0 0 18px;font-size:15px}
-.who b{font-size:18px;margin-right:8px}
-.who span{color:var(--muted);font:600 12px var(--f-display);letter-spacing:.08em}
-.cinfo{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
-.cinfo div{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
-.cinfo dt{font:700 11.5px var(--f-display);letter-spacing:.14em;color:var(--muted)}
-.cinfo dd{margin:0;font-size:15px;word-break:break-all;font-variant-numeric:tabular-nums}
-.copy{font:600 12px var(--f-body);background:none;border:1px solid var(--line);color:var(--muted);padding:5px 11px;border-radius:999px;cursor:pointer}
-.copy:hover{color:var(--ink);border-color:var(--ink)}
-@media (max-width:860px){.contact{grid-template-columns:1fr;gap:32px}}
-
-footer{border-top:1px solid var(--line);padding-block:36px 44px;color:var(--muted);font-size:13px}
-footer .row{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between}
-footer img{height:18px;width:auto;opacity:.9}
-</style>
+<link rel="stylesheet" href="style.css">
+<meta property="og:title" content="BUTTON"><meta property="og:description" content="BUTTON — 아티스트, 컴퍼니, 작품을 위한 브랜딩 PR 에이전시"><meta property="og:image" content="img/artist.jpg">
+<link rel="icon" href="img/logo-white.png">
 </head><body>
-
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#top"><img src="img/wordmark-white.png" alt="BUTTON"></a>
+    <a class="logo" href="index.html"><img src="img/wordmark-white.png" alt="BUTTON"></a>
     <nav class="main">
-      <a href="#essence">ESSENCE</a>
-      <a href="#scope">WORK SCOPE</a>
-      <a href="#why">WHY BUTTON</a>
-      <a href="#references">REFERENCES</a>
-      <a href="#newsroom">NEWSROOM</a>
-      <a href="#contact">CONTACT</a>
+      <a href="about.html">ESSENCE</a>
+      <a href="work.html">WORK SCOPE</a>
+      <a href="why.html">WHY BUTTON</a>
+      <a href="references.html">REFERENCES</a>
+      <a href="newsroom.html">NEWSROOM</a>
+      <a href="contact.html">CONTACT</a>
     </nav>
-    <a class="pill" href="#contact">프로젝트 문의</a>
+    <a class="pill" href="contact.html">프로젝트 문의</a>
   </div>
+  <nav class="subnav" aria-label="메뉴"><div class="wrap in">
+      <a href="about.html">ESSENCE</a>
+      <a href="work.html">WORK SCOPE</a>
+      <a href="why.html">WHY BUTTON</a>
+      <a href="references.html">REFERENCES</a>
+      <a href="newsroom.html">NEWSROOM</a>
+      <a href="contact.html">CONTACT</a>
+  </div></nav>
 </header>
 
 <main id="top">
-  <div class="wrap hero">
+<div class="wrap hero">
     <p class="kicker"><i class="bmark"></i>BRANDING PR AGENCY</p>
     <h1>당신의 브랜드가 문을 여는 순간,<br><span class="en">push the <span class="or">BUTTON</span></span></h1>
     <p>버튼은 아티스트, 컴퍼니, 작품을 위한 브랜딩 PR 에이전시입니다. 브랜드 진단부터 언론 홍보, 콘텐츠 제작, 위기 관리까지 한 팀이 처음부터 끝까지 맡습니다.</p>
     <div class="ctas">
-      <a class="btn primary" href="#contact">프로젝트 문의</a>
+      <a class="btn primary" href="contact.html">프로젝트 문의</a>
     </div>
   </div>
   <div class="runway" role="img" aria-label="무대 위로 이어지는 런웨이"></div>
 
-  <section class="block" id="essence">
+  <section class="block">
     <div class="wrap">
-      <div class="shead"><span class="chapter">CHAPTER. 01</span><h2>THE ESSENCE <small>DETAIL STRATEGY</small></h2></div>
-      <div class="essence">
-        <div>
-          <p class="state">아티스트, 컴퍼니, 작품을 위한 토탈 브랜딩 마케팅 솔루션과 액티비티를 실행하는 <b>BRANDING PR AGENCY</b></p>
-          <blockquote>브랜딩이란 첫 단추를 잘 꿰는 일이며,<br>세상의 문을 열기 위해 가장 먼저 할 일은 <strong>BUTTON</strong>을 누르는 것.</blockquote>
-        </div>
-        <figure><img src="img/artist.jpg" alt="흑백 화보 속 아티스트" loading="lazy"></figure>
+      <div class="shead"><h2>BUTTON <small>MENU</small></h2></div>
+      <div class="menu-grid">
+        <a href="about.html"><span class="t"><i class="bmark"></i>ESSENCE</span><span class="d">아티스트, 컴퍼니, 작품을 위한 토탈 브랜딩 PR 에이전시</span><span class="go">VIEW →</span></a>
+        <a href="work.html"><span class="t"><i class="bmark"></i>WORK SCOPE</span><span class="d">브랜딩, PR, 콘텐츠, 위기 관리까지 네 가지 솔루션</span><span class="go">VIEW →</span></a>
+        <a href="why.html"><span class="t"><i class="bmark"></i>WHY BUTTON</span><span class="d">티어 업그레이드, 미디어, 패션 DNA, 글로벌 네트워크</span><span class="go">VIEW →</span></a>
+        <a href="references.html"><span class="t"><i class="bmark"></i>REFERENCES</span><span class="d">영화, 글로벌 브랜드, 아티스트 브랜딩 프로젝트</span><span class="go">VIEW →</span></a>
+        <a href="newsroom.html"><span class="t"><i class="bmark"></i>NEWSROOM</span><span class="d">버튼이 진행한 보도자료와 기획</span><span class="go">VIEW →</span></a>
+        <a href="contact.html"><span class="t"><i class="bmark"></i>CONTACT</span><span class="d">프로젝트 문의와 사무실 안내</span><span class="go">VIEW →</span></a>
       </div>
     </div>
   </section>
 
-  <section class="block" id="scope">
+  <section class="block" style="padding-top:0">
     <div class="wrap">
-      <div class="shead"><span class="chapter">CHAPTER. 02</span><h2>WORK SCOPE <small>SOLUTION</small></h2></div>
-      <div class="scope">
-        <article class="card">
-          <h3><i class="bmark"></i>BRANDING</h3>
-          <p class="lead">브랜드 진단, 컨셉과 마케팅 방향성, 브랜드별 홍보 마케팅 전략</p>
-          <ul><li>신규 브랜드 빌드업과 기존 브랜드 리브랜딩</li><li>브랜드 목표와 니즈에 맞춘 전략적 홍보·마케팅</li><li>아티스트 비주얼리티 컨셉 — 헤어, 메이크업, 스타일리스트, 포토그래퍼 스태프 조합 제안</li></ul>
-        </article>
-        <article class="card">
-          <h3><i class="bmark"></i>PR ACTIVITY</h3>
-          <p class="lead">보도국, 일간지, 온라인, 매거진 전 매체 커버리지와 프레스 관리</p>
-          <ul><li>기획기사 피칭과 인터뷰 어레인지</li><li>일간지, 보도국, 유튜브, 예능까지 미디어 전방위 커버리지</li><li>국내·해외 패션 라이선스 매거진 기획 인터뷰</li></ul>
-        </article>
-        <article class="card">
-          <h3><i class="bmark"></i>CONTENTS</h3>
-          <p class="lead">포토·영상 전문 제작팀이 만드는 팬덤 형성 콘텐츠</p>
-          <ul><li>작품 활동과 광고주 케어를 위한 스페셜 앵글 기획</li><li>부산국제영화제, 신년, 크리스마스 등 시즈널 이슈 영상</li><li>SNS 채널 리뉴얼 컨셉 전략과 디자인 총괄</li></ul>
-        </article>
-        <article class="card">
-          <h3><i class="bmark"></i>RISK MANAGEMENT</h3>
-          <p class="lead">언론·대중 이슈 대응과 리스크 대응 전략, 네트워킹 관리</p>
-          <ul><li>브랜드 상황과 정치·사회적 시기성을 고려한 다각도 리스크 체크</li><li>언론사 네트워킹을 통한 실시간 대응 체계</li><li>외부 대행사 수준을 넘어선 인하우스 밀착 케어로 브랜드 티어 유지·업그레이드</li></ul>
-        </article>
-      </div>
-      <figure class="band"><img src="img/set.jpg" alt="조명 아래 촬영 현장의 카메라와 스태프" loading="lazy"><figcaption>FAN ENGAGEMENT CONTENTS</figcaption></figure>
-    </div>
-  </section>
-
-  <section class="block" id="why">
-    <div class="wrap">
-      <div class="shead"><span class="chapter">CHAPTER. 03</span><h2>WHY BUTTON? <small>COMPETITIVENESS</small></h2></div>
-      <div class="why">
-        <div><span class="k">TIER UP</span><h3>브랜드 티어 업그레이드</h3><p>글로벌·내셔널 브랜드 런칭과 리브랜딩에 최적화되어 있습니다.</p></div>
-        <div><span class="k">MEDIA</span><h3>홍보 마케팅 실력과 미디어 퍼포먼스</h3><p>매체마다 맞는 기획으로 실제 노출을 만듭니다.</p></div>
-        <div><span class="k">FASHION DNA</span><h3>하이엔드 브랜드·매거진 네트워크</h3><p>하이엔드 브랜드와 매거진 편집장 네트워크를 갖고 있습니다.</p></div>
-        <div><span class="k">GLOBAL</span><h3>글로벌 에이전시 협업</h3><p>미국, 유럽, 아시아 에이전시와 협업 체계를 갖추고 있습니다.</p></div>
-        <div><span class="k">UNION</span><h3>전문가 유니온</h3><p>브랜드 니즈에 따라 최상의 전문가 집단과 co-work 합니다.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="references">
-    <div class="wrap">
-      <div class="shead"><span class="chapter">CHAPTER. 04</span><h2>REFERENCES <small>MOVIE · BRAND · ARTISTS</small></h2></div>
-      <div class="refs">
-        <div class="ref"><h3>ENTERTAINMENT</h3><div><p>영화 &lt;마더&gt;, &lt;구르믈 버서난 달처럼&gt;, &lt;Mr.로빈꼬시기&gt;, &lt;천년학&gt;, &lt;내사랑&gt;, &lt;점퍼&gt;</p><p class="sub">제9회 부천국제영화제 외</p></div></div>
-        <div class="ref"><h3>GLOBAL BRANDS</h3><div><p>샤넬, 코카콜라, 글라소 비타민워터, 모엣샹동, A.P.C., 플랫폼 플레이스, 인케이스</p><p class="sub">외 다수 글로벌·내셔널 브랜드 PR 프로젝트 수행</p></div></div>
-        <div class="ref"><h3>ARTIST BRANDING</h3><div><p>사람엔터테인먼트 — 이제훈, 이하늬, 정호연, 박규영, 변요한, 김민하 외</p><p class="sub">통합 브랜딩 전략 수립과 실행 (미디어 · 광고 · 콘텐츠)</p></div></div>
-        <div class="ref"><h3>SPECIAL PROJECT</h3><div><p>스타일서울 프로젝트 (서울·뉴욕 동시 진행)</p><p class="sub">정우성, 메이크업 아티스트 정샘물, 스타일리스트 한혜연 등 K-엔터테인먼트 탑 티어 10인 인터뷰 필름·북 제작과 PR 전 과정 총괄</p><p>이혜영 작가 전시회 PR (서울·뉴욕)</p></div></div>
-        <div class="ref"><h3>BRAND LAUNCHING</h3><div><p>라이프스타일 브랜드 ‘붐베이직’ 런칭</p><p class="sub">온·오프라인 통합 브랜드 컨설팅, 브랜드 플래그십 스토어 오픈</p></div></div>
-        <div class="ref"><h3>CLIENTS</h3><div><p>팡파레(심은경), 앨컴퍼니(김원중, 메구), KHS에이전시(이영애, 이병헌 감독, 황정음, 루나 외)</p><p class="sub">글로벌 제작사 데저트블룸 픽쳐스, 글로벌 캐스팅 컴퍼니 수킴컴퍼니, 글로벌 매니지먼트사 스테이지 브릿지 · 영화 &lt;내일의 민재&gt;, 글로벌 합작 프로젝트 &lt;개인적인 택시&gt;, 연극 제작사 콘텐츠합</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="newsroom">
-    <div class="wrap">
-      <div class="shead"><span class="chapter">NEWS</span><h2>NEWSROOM <small>PRESS RELEASE · PROJECT</small></h2></div>
-      <div class="tabs" role="group" aria-label="게시판 분류">
-        <button type="button" id="t-all" data-f="all" aria-pressed="true">전체<span class="count" id="c-all"></span></button>
-        <button type="button" id="t-press" data-f="보도자료" aria-pressed="false">보도자료<span class="count" id="c-press"></span></button>
-        <button type="button" id="t-plan" data-f="기획" aria-pressed="false">기획<span class="count" id="c-plan"></span></button>
-      </div>
-      <ul class="posts" id="posts"></ul>
-    </div>
-  </section>
-
-  <section class="block" id="contact">
-    <div class="wrap">
-      <div class="shead"><h2>CONTACT US</h2></div>
-      <div class="contact">
-        <p class="line">당신의 브랜드가 문을 여는 순간,<br><span class="en">push the <span class="or">BUTTON</span></span></p>
-        <div>
-          <p class="who"><b>양현진</b>대표 <span>REPRESENTATIVE DIRECTOR</span></p>
-          <dl class="cinfo">
-            <div><dt>MAIL</dt><dd id="v-mail">hj.yang@the-button.co.kr</dd><button type="button" class="copy" id="cp-mail" data-t="v-mail">복사</button></div>
-            <div><dt>OFFICE</dt><dd id="v-addr">서울 강남구 도산대로54길 10, 4층 버튼</dd><button type="button" class="copy" id="cp-addr" data-t="v-addr">복사</button></div>
-          </dl>
-        </div>
-      </div>
+      <div class="shead"><span class="chapter">NEWS</span><h2>LATEST <small>NEWSROOM</small></h2></div>
+      <ul class="latest" id="latest"><li class="empty">게시물을 불러오는 중입니다.</li></ul>
+      <a class="more" href="newsroom.html">뉴스룸 전체 보기 →</a>
     </div>
   </section>
 </main>
@@ -281,65 +74,15 @@ footer img{height:18px;width:auto;opacity:.9}
   </div>
 </footer>
 
-<dialog id="dlg" aria-labelledby="d-title">
-  <button type="button" class="close" id="d-close" aria-label="닫기">×</button>
-  <div class="dlg">
-    <div class="meta"><span class="chip" id="d-type"></span><time id="d-date"></time></div>
-    <h3 id="d-title"></h3>
-    <img id="d-img" alt="" hidden>
-    <div class="body" id="d-body"></div>
-    <div class="acts" id="d-acts"></div>
-  </div>
-</dialog>
-
 <script>
 (function(){
-  var POSTS=[],filter='all',list=document.getElementById('posts'),dlg=document.getElementById('dlg');
+  var ul=document.getElementById('latest');
   function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-  function fmt(d){return d?d.replace(/-/g,'.'):''}
-  function render(){
-    var rows=POSTS.filter(function(p){return filter==='all'||p.type===filter});
-    document.getElementById('c-all').textContent=POSTS.length;
-    document.getElementById('c-press').textContent=POSTS.filter(function(p){return p.type==='보도자료'}).length;
-    document.getElementById('c-plan').textContent=POSTS.filter(function(p){return p.type==='기획'}).length;
-    if(!rows.length){list.innerHTML='<li class="empty">등록된 '+(filter==='all'?'게시물':filter)+'이 없습니다.</li>';return}
-    list.innerHTML=rows.map(function(p){
-      return '<li><button type="button" class="post" data-id="'+esc(p.id)+'"><span class="chip'+(p.type==='보도자료'?' press':'')+'">'+esc(p.type)+'</span><div><h3>'+esc(p.title)+'</h3><p>'+esc(p.summary)+'</p></div><time>'+esc(fmt(p.date))+'</time></button></li>';
-    }).join('');
-  }
-  function open(id){
-    var p=POSTS.find(function(x){return x.id===id});if(!p)return;
-    var t=document.getElementById('d-type');t.textContent=p.type;t.className='chip'+(p.type==='보도자료'?' press':'');
-    document.getElementById('d-date').textContent=fmt(p.date);
-    document.getElementById('d-title').textContent=p.title;
-    var im=document.getElementById('d-img');if(p.image){im.src=p.image;im.alt=p.title;im.hidden=false}else{im.hidden=true;im.removeAttribute('src')}
-    document.getElementById('d-body').innerHTML=String(p.body||p.summary||'').split(/\n\s*\n/).map(function(x){return '<p>'+esc(x).replace(/\n/g,'<br>')+'</p>'}).join('');
-    var a='';
-    if(p.file)a+='<a class="btn primary" href="'+esc(p.file)+'" target="_blank" rel="noopener">첨부 파일 보기</a>';
-    if(p.link)a+='<a class="btn" href="'+esc(p.link)+'" target="_blank" rel="noopener">기사 원문 보기</a>';
-    document.getElementById('d-acts').innerHTML=a;
-    if(!dlg.open)dlg.showModal();
-    try{history.replaceState(null,'','#'+id)}catch(e){}
-  }
-  function close(){dlg.close()}
-  dlg.addEventListener('close',function(){try{if(location.hash.slice(1)&&POSTS.some(function(p){return p.id===location.hash.slice(1)}))history.replaceState(null,'','#newsroom')}catch(e){}});
-  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
-  document.getElementById('d-close').addEventListener('click',close);
-  list.addEventListener('click',function(e){var b=e.target.closest('.post');if(b)open(b.dataset.id)});
-  document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
-    filter=b.dataset.f;document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});render()})});
-  list.innerHTML='<li class="empty">게시물을 불러오는 중입니다.</li>';
   fetch('posts.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
-    POSTS=(Array.isArray(d)?d:[]).slice().sort(function(a,b){return (b.date||'').localeCompare(a.date||'')});
-    render();var h=location.hash.slice(1);if(h&&POSTS.some(function(p){return p.id===h}))open(h);
-  }).catch(function(){list.innerHTML='<li class="empty">게시물을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</li>'});
-
-  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
-    var el=document.getElementById(b.dataset.t),t=el.textContent,l=b.textContent;
-    function done(){b.textContent='복사됨';setTimeout(function(){b.textContent=l},1400)}
-    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
-    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,sel);else sel();
-  })});
+    var p=(Array.isArray(d)?d:[]).slice().sort(function(a,b){return (b.date||'').localeCompare(a.date||'')}).slice(0,3);
+    if(!p.length){ul.innerHTML='<li class="empty">등록된 게시물이 없습니다.</li>';return}
+    ul.innerHTML=p.map(function(x){return '<li><a href="newsroom.html#'+esc(x.id)+'"><span class="chip'+(x.type==='보도자료'?' press':'')+'">'+esc(x.type)+'</span><h3>'+esc(x.title)+'</h3><time>'+esc((x.date||'').replace(/-/g,'.'))+'</time></a></li>'}).join('');
+  }).catch(function(){ul.innerHTML='<li class="empty">게시물을 불러오지 못했습니다.</li>'});
 })();
 </script>
 </body></html>
