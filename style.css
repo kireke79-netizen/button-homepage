@@ -178,3 +178,16 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;font:600 11.5px var(--f-disp
 footer nav a{text-decoration:none}
 footer nav a:hover{color:var(--ink)}
 .thanks{padding-block:120px 140px}
+
+/* i18n */
+.langs{display:flex;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;flex:none}
+.langs a{font:600 11.5px var(--f-display);letter-spacing:.06em;text-decoration:none;color:var(--muted);padding:5px 10px;border-radius:999px;white-space:nowrap}
+.langs a:hover{color:var(--ink)}
+.langs a[aria-current="true"]{background:var(--ink);color:var(--bg)}
+nav.main + .langs{margin-left:0}
+@media (max-width:960px){.langs{margin-left:auto}.langs + .pill{margin-left:0}}
+@media (max-width:600px){.pill{display:none}}
+:root:lang(zh){--f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;--f-display:"Montserrat","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+:lang(zh) *{word-break:normal!important;overflow-wrap:anywhere}
+:lang(en) .cinfo dd{word-break:normal;overflow-wrap:anywhere}
+:lang(en) .plead,:lang(en) .hero h1{letter-spacing:-.02em}
